@@ -1,7 +1,7 @@
 # product-purchase-prediction
 
 ## 📋 Project Overview
-This project implements a **Logistic Regression** model for a binary classification task using the `Social_Network_Ads.csv` dataset. The goal is to predict whether a user will purchase a product based on their age and estimated salary.
+This project implements a **Logistic Regression** and a **K-Nearest Neighbors (K-NN)** model for a binary classification task using the `Social_Network_Ads.csv` dataset. The goal is to predict whether a user will purchase a product based on their age and estimated salary.
 
 ---
 
@@ -35,6 +35,7 @@ This project implements a **Logistic Regression** model for a binary classificat
 
 ### 5. Training the Model
 - Used `LogisticRegression` from `sklearn.linear_model`.
+- The K-NN classifier is trained on the training set with 5 neighbors and the Minkowski distance metric. 
 - Trained the model on the scaled training data.
 
 ### 6. Making Predictions
@@ -49,18 +50,20 @@ This project implements a **Logistic Regression** model for a binary classificat
 
 ## 📈 Visualizations
 - **Confusion Matrix**: Displayed using `ConfusionMatrixDisplay`.
-- **Decision Boundary**: Plotted for both training and test sets using `contourf` and scatter plots.
+- **Decision Boundary**: Plotted for both training and test sets using `contourf` and scatter plots for the logistic regression model.
 
 ---
 
 ## 📁 Files
-- `Jozveh_Logistic_regression(classification).ipynb`: Main notebook containing all code and outputs.
+- `Jozveh_Logistic_regression(classification).ipynb`: Main notebook containing all code and outputs for logistic regression.
+- `Jozveh_k_nearest_neighbors.ipynb`: Main notebook containing all code and outputs for KNN.
 - `Social_Network_Ads.csv`: dataset file
 
 ---
 
 ## 🧠 Key Concepts
 - **Logistic Regression**: A linear model for binary classification.
+- **K-Nearest Neighbors (K-NN)**: A non-parametric, instance-based learning algorithm that classifies data points based on the majority class among their k-nearest neighbors.
 - **Feature Scaling**: Standardization of features to improve model performance.
 - **Train-Test Split**: Dividing data into training and testing subsets.
 - **Confusion Matrix**: A table to evaluate classification performance.
@@ -70,7 +73,3 @@ This project implements a **Logistic Regression** model for a binary classificat
 
 ## 📌 Note
 The visualization code for decision boundaries is included but may not be directly applicable to datasets with more than two features. It is provided for educational purposes.
-
-
-## 🔚 Conclusion
-The model achieved an accuracy of approximately **82.33%** on the test set. The decision boundary plots show how the model separates the two classes based on age and salary.
