@@ -1,7 +1,7 @@
 # product-purchase-prediction
 
 ## 📋 Project Overview
-This project implements a **Logistic Regression** and a **K-Nearest Neighbors (K-NN)** model for a binary classification task using the `Social_Network_Ads.csv` dataset. The goal is to predict whether a user will purchase a product based on their age and estimated salary.
+This project implements a **Logistic Regression**,**K-Nearest Neighbors (K-NN)** plus a **Support Vector Machine (SVM) classifier** model for a binary classification task using the `Social_Network_Ads.csv` dataset. The goal is to predict whether a user will purchase a product based on their age and estimated salary.
 
 ---
 
@@ -27,7 +27,6 @@ This project implements a **Logistic Regression** and a **K-Nearest Neighbors (K
 
 ### 3. Splitting the Dataset
 - Split the data into training and test sets using `train_test_split` from `sklearn`.
-- Used a 75–25 split (300 training, 100 test samples).
 
 ### 4. Feature Scaling
 - Applied `StandardScaler` to normalize the features.
@@ -35,7 +34,8 @@ This project implements a **Logistic Regression** and a **K-Nearest Neighbors (K
 
 ### 5. Training the Model
 - Used `LogisticRegression` from `sklearn.linear_model`.
-- The K-NN classifier is trained on the training set with 5 neighbors and the Minkowski distance metric. 
+- The K-NN classifier is trained on the training set with 5 neighbors and the Minkowski distance metric.
+- The SVM is trained with the `linear` kernel.
 - Trained the model on the scaled training data.
 
 ### 6. Making Predictions
@@ -57,6 +57,7 @@ This project implements a **Logistic Regression** and a **K-Nearest Neighbors (K
 ## 📁 Files
 - `Jozveh_Logistic_regression(classification).ipynb`: Main notebook containing all code and outputs for logistic regression.
 - `Jozveh_k_nearest_neighbors.ipynb`: Main notebook containing all code and outputs for KNN.
+- `Jozveh_Support_Vector_Machine_Classification`: Codes for the SVM solution.
 - `Social_Network_Ads.csv`: dataset file
 
 ---
@@ -64,6 +65,7 @@ This project implements a **Logistic Regression** and a **K-Nearest Neighbors (K
 ## 🧠 Key Concepts
 - **Logistic Regression**: A linear model for binary classification.
 - **K-Nearest Neighbors (K-NN)**: A non-parametric, instance-based learning algorithm that classifies data points based on the majority class among their k-nearest neighbors.
+- **SVM**: A powerful supervised learning algorithm that finds the optimal hyperplane to separate classes by maximizing the margin between them.
 - **Feature Scaling**: Standardization of features to improve model performance.
 - **Train-Test Split**: Dividing data into training and testing subsets.
 - **Confusion Matrix**: A table to evaluate classification performance.
